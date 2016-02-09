@@ -2,6 +2,7 @@ from flask import Flask, request, session, g, redirect, url_for, abort, render_t
 from pandas import DataFrame, read_csv
 import numpy as np
 import pandas as pd
+import os
 app = Flask(__name__,static_folder="static",static_url_path='')
 ##url_for('static', filename='style.css')
 
@@ -31,4 +32,5 @@ def get_language_count(lan_id):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port=80)
+	port = int(os.environ.get("PORT", 5000)) 
+    app.run(host='0.0.0.0',port=port)
