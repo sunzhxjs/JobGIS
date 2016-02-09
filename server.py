@@ -7,10 +7,18 @@ app = Flask(__name__,static_folder="static",static_url_path='')
 ##url_for('static', filename='style.css')
 
 df = pd.read_csv('./amount.csv',index_col="state")
+df_city = pd.read_csv('./amount_city.csv',index_col='city')
+df_city=df_city.fillna(0)
+df_city=df_city.astype(int)
+#print df.get_dtype_counts()
+df_city['total_in_city']=df_city.sum(axis=1)
+#print df_city
 df['total_in_state']=df.sum(axis=1) #sum all columns and ingnore non-numeric columns
 df.loc['total_in_language']=df.sum(axis=0)
-header_list = df.columns.values.tolist()
-print header_list
+
+state_header_list = df.columns.values.tolist()
+city_header_list = df.columns.values.tolist()
+#print header_list
 
 #row = df.loc['Texas'].values.tolist();
 
@@ -22,15 +30,26 @@ def index():
 
 @app.route('/language/<string:lan_id>',methods=['GET'])
 def get_language_count(lan_id):
-	state_ls = df[header_list[int(lan_id)-1]].values.tolist()
+	if int(lan_id)==0:
+		print 'total'
+		state_ls = df['total_in_state'].values.tolist()
+		city_ls = df_city['total_in_city'].values.tolist()
+		print state_ls
+		print city_ls
+	else:
+		print 'not_total'
+		state_ls = df[state_header_list[int(lan_id)-1]].values.tolist()
+		city_ls = df_city[city_header_list[int(lan_id)-1]].values.tolist()
+	
 	# lan.decode(encoding='UTF-8')
 	# print lan
 	#state_ls=df[lan].values.tolist()
-	return jsonify({'count':state_ls})
+	return jsonify({'state_count':state_ls,'city_count':city_ls})
 
 
 
 
 if __name__ == '__main__':
-	hostport=int(os.environ.get("PORT", 5000))
-	app.run(host='0.0.0.0',port=hostport)
+	#hostport=int(os.environ.get("PORT", 5000))
+	#app.run(host='0.0.0.0',port=hostport)
+	app.run(debug=True)
