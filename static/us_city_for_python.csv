@@ -1,0 +1,99 @@
+Rank,Place,State,Census,latitude,longitude
+1,New York ,New York,"8,175,133",40.730599,-73.986581
+2,Los Angeles ,California,"3,792,621",34.054394,-118.243941
+3,Chicago ,Illinois,"2,695,598",41.875555,-87.624421
+4,Houston ,Texas,"2,099,451",29.758938,-95.367697
+5,Philadelphia ,Pennsylvania,"1,526,006",39.952399,-75.16359
+6,Phoenix ,Arizona,"1,445,632",33.446768,-112.075672
+7,San Antonio ,Texas,"1,327,407",29.4246,-98.49514
+8,San Diego ,California,"1,307,402",32.717421,-117.162771
+9,Dallas ,Texas,"1,197,816",32.776272,-96.796856
+10,San Jose ,California,"945,942",37.336191,-121.890583
+11,Jacksonville ,Florida,"821,784",30.332184,-81.655651
+12,Indianapolis ,Indiana,"820,445",39.768403,-86.158068
+13,Austin ,Texas,"790,390",30.271129,-97.743699
+14,San Francisco ,California,"805,235",37.779277,-122.41927
+15,Columbus ,Ohio,"787,033",39.96226,-83.000706
+16,Fort Worth ,Texas,"741,206",32.753177,-97.332746
+17,Charlotte ,North Carolina,"731,424",35.227087,-80.843127
+18,Detroit ,Michigan,"713,777",42.348664,-83.056737
+19,El Paso ,Texas,"649,121",31.811131,-106.501349
+20,Memphis ,Tennessee,"646,889",35.149022,-90.051628
+21,Boston ,Massachusetts,"617,594",42.360482,-71.059568
+22,Seattle ,Washington,"608,660",47.603832,-122.330062
+23,Denver ,Colorado,"600,158",39.739154,-104.984703
+24,Baltimore ,Maryland,"620,961",39.290861,-76.610807
+25,Washington ,District of Columbia,"601,723",38.894955,-77.036646
+26,Milwaukee ,Wisconsin,"594,833",43.034993,-87.922497
+27,Portland ,Oregon,"583,776",45.520247,-122.674195
+28,Oklahoma  ,Oklahoma,"579,999",35.473444,-97.518506
+29,Las Vegas ,Nevada,"583,756",36.166286,-115.149225
+30,Albuquerque ,New Mexico,"545,852",35.084103,-106.650985
+31,Tucson ,Arizona,"520,116",32.221742,-110.926476
+32,Fresno ,California,"494,665",36.72953,-119.708861
+33,Sacramento ,California,"466,488",38.561652,-121.450028
+34,Long Beach ,California,"462,257",33.777466,-118.188487
+35,Kansas  ,Missouri,"459,787",39.099727,-94.578567
+36,Mesa ,Arizona,"439,041",33.414191,-111.833139
+37,Virginia Beach ,Virginia,"437,994",36.718371,-76.24668
+38,Atlanta ,Georgia,"420,003",33.749099,-84.390185
+39,Colorado Springs ,Colorado,"416,427",38.833958,-104.825348
+40,Raleigh ,North Carolina,"403,892",35.780402,-78.639078
+41,Omaha ,Nebraska,"408,958",41.258732,-95.937873
+42,Miami ,Florida,"399,457",25.774266,-80.193659
+43,Tulsa ,Oklahoma,"391,906",36.155681,-95.992911
+44,Oakland ,California,"390,724",37.804456,-122.271356
+45,Cleveland ,Ohio,"396,815",41.505161,-81.693445
+46,Minneapolis ,Minnesota,"382,578",44.9773,-93.265469
+47,Wichita ,Kansas,"382,368",37.692236,-97.337545
+48,Arlington ,Texas,"365,438",32.735582,-97.107119
+49,New Orleans ,Louisiana,"343,829",29.949932,-90.070116
+50,Bakersfield ,California,"347,483",35.373871,-119.019464
+51,Tampa ,Florida,"335,709",27.94776,-82.458444
+52,Anaheim ,California,"336,265",33.834752,-117.911732
+53,Honolulu ,Hawaii,"337,256",21.306944,-157.858333
+54,Aurora ,Colorado,"325,078",41.760585,-88.320071
+55,Santa Ana ,California,"324,528",33.74996,-117.873283
+56,St. Louis ,Missouri,"319,294",38.627273,-90.197889
+57,Riverside ,California,"303,871",33.953355,-117.396162
+58,Corpus Christi ,Texas,"305,215",27.800254,-97.395574
+59,Pittsburgh ,Pennsylvania,"305,704",40.441694,-79.990086
+60,Lexington ,Kentucky,"295,803",38.046407,-84.497039
+61,Stockton ,California,"291,707",37.957702,-121.29078
+62,Cincinnati ,Ohio,"296,943",39.101454,-84.51246
+63,Anchorage ,Alaska,"291,826",61.216313,-149.894852
+64,St. Paul ,Minnesota,"285,068",44.950404,-93.101503
+65,Toledo ,Ohio,"287,208",41.678675,-83.512728
+66,Newark ,New Jersey,"277,140",40.735657,-74.172367
+67,Greensboro ,North Carolina,"269,666",36.072636,-79.791975
+68,Plano ,Texas,"259,841",33.013676,-96.69251
+69,Lincoln ,Nebraska,"258,379",40.800055,-96.6674
+70,Buffalo ,New York,"261,310",42.886447,-78.878369
+71,Henderson ,Nevada,"257,729",40.815612,-90.910455
+72,Fort Wayne ,Indiana,"253,691",41.07999,-85.138601
+73,Jersey  ,New Jersey,"247,597",40.728157,-74.077642
+74,Chula Vista ,California,"243,916",32.640054,-117.084195
+75,St. Petersburg ,Florida,"244,769",27.751828,-82.626734
+76,Orlando ,Florida,"238,300",28.542118,-81.379046
+77,Norfolk ,Virginia,"242,803",36.841815,-76.191781
+78,Laredo ,Texas,"236,091",27.506099,-99.508898
+79,Chandler ,Arizona,"236,123",33.306674,-111.84086
+80,Madison ,Wisconsin,"233,209",43.074761,-89.383761
+81,Lubbock ,Texas,"229,573",33.577863,-101.855166
+82,Durham ,North Carolina,"228,330",35.994033,-78.898619
+83,Winston-Salem ,North Carolina,"229,617",36.099817,-80.244144
+84,Garland ,Texas,"226,876",32.912624,-96.638883
+85,Glendale ,Arizona,"226,721",34.142346,-118.248367
+86,Baton Rouge ,Louisiana,"229,493",30.450746,-91.154551
+87,Hialeah ,Florida,"224,669",25.867044,-80.291463
+88,Reno ,Nevada,"225,221",39.52927,-119.813674
+89,Chesapeake ,Virginia,"222,209",36.718371,-76.24668
+90,Scottsdale ,Arizona,"217,385",33.509122,-111.899236
+91,Irving ,Texas,"216,290",32.862919,-96.97917
+92,North Las Vegas ,Nevada,"216,961",36.200837,-115.112096
+93,Fremont ,California,"214,089",37.54827,-121.988572
+94,Irvine ,California,"212,375",33.685697,-117.825982
+95,San Bernardino ,California,"209,924",34.108345,-117.289765
+96,Birmingham ,Alabama,"212,237",33.520661,-86.80249
+97,Gilbert ,Arizona,"208,453",33.352826,-111.789024
+98,Rochester ,New York,"210,565",43.185475,-77.610686
