@@ -34,22 +34,26 @@ def get_language_count(lan_id):
 		print 'total'
 		state_ls = df['total_in_state'].values.tolist()
 		city_ls = df_city['total_in_city'].values.tolist()
-		print state_ls
-		print city_ls
+		state_rank= df['total_in_state'][0:-1].rank(ascending=False).values.tolist()
+		city_rank= df_city['total_in_city'][0:-1].rank(ascending=False).values.tolist()
+		print state_rank
 	else:
 		print 'not_total'
 		state_ls = df[state_header_list[int(lan_id)-1]].values.tolist()
 		city_ls = df_city[city_header_list[int(lan_id)-1]].values.tolist()
+		state_rank = df[state_header_list[int(lan_id)-1]][0:-1].rank(ascending=False).values.tolist()
+		city_rank = df_city[city_header_list[int(lan_id)-1]][0:-1].rank(ascending=False).values.tolist()
+
 	
 	# lan.decode(encoding='UTF-8')
 	# print lan
 	#state_ls=df[lan].values.tolist()
-	return jsonify({'state_count':state_ls,'city_count':city_ls})
+	return jsonify({'state_count':state_ls,'city_count':city_ls,'state_rank':state_rank,'city_rank':city_rank})
 
 
 
 
 if __name__ == '__main__':
-	hostport=int(os.environ.get("PORT", 5000))
-	app.run(host='0.0.0.0',port=hostport)
-	#app.run(debug=True)
+	#hostport=int(os.environ.get("PORT", 5000))
+	#app.run(host='0.0.0.0',port=hostport)
+	app.run(debug=True)

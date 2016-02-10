@@ -68,7 +68,8 @@ with open('./static/us_city_for_python.csv') as cf:
 				try:
 					element = WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "results-context")))
 				except Exception as e:
-					print type(e)	
+					print type(e)
+					city_ls[l]=0	
 				else:
 					pageSource = driver.page_source
 					bsObj = BeautifulSoup(pageSource,"html.parser")

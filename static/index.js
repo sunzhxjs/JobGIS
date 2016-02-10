@@ -1,4 +1,4 @@
-    var width = 750, height = 400;
+    var width = 850, height = 450;
 
     
 
@@ -15,7 +15,7 @@
     var svg = d3.select("#map").append("svg")
             .attr("width", width)
             .attr("height", height);
-    var projection = d3.geo.albersUsa().translate([width/2.2, height/2.4]).scale([750]);
+    var projection = d3.geo.albersUsa().translate([width/1.6, height/2.5]).scale([800]);
     var path = d3.geo.path().projection(projection);
 
     //$("#swap").click(updatemap);
@@ -26,31 +26,45 @@
     d3.selectAll(".m")
                 .on("click", function() {
                     var lan_id = this.getAttribute("value");
-                    updatemap(lan_id);
+                    var language = $(this).text();
+                    updatemap(lan_id,language);
                   });
 
 
-    function updatemap(lan_id){
+    function updatemap(lan_id,language){
        console.log("click");
        queue()
       .defer(d3.json, "us_state.json")
       .defer(d3.csv, "us_city.csv")
-      .await(function(error,us,city){ready(us,city,lan_id)});
+      .await(function(error,us,city){ready(us,city,lan_id,language)});
     }
     
 
    // d3.json("https://raw.githubusercontent.com/alignedleft/d3-book/master/chapter_12/us-states.json",ready);
 
-    function ready(us,city,lan_id) {
+    function ready(us,city,lan_id,language) {
         console.log(lan_id);
 		    //console.log(us);
+
        
+
+        if (!language) language='All'
         var host = $(location).attr('host');
         var protocol = $(location).attr('protocol');
         //lan=encodeURIComponent(lan)
         //console.log(lan)
        //console.log(protocol+'//'+host+'/'+lan)
         $.get(protocol+'//'+host+'/language/'+lan_id,function(data_in_us){  
+        var tip = d3.tip()
+                  .attr('class', 'd3-tip')
+                  .offset([0, 10])
+                  .html(function(d){
+                    return "<span class='tipline1'><b>State: "+d.properties.name+"</b></br></span>"+
+                          "<span class='tipline2'><b>"+language+" Jobs: "+data_in_us.state_count[d.seq]+"</b></br></span>"
+                          +"<span class='tipline3'><b>Rank: "+parseInt(data_in_us.state_rank[d.seq])+"</b></span>"
+                  })
+        svg.call(tip);
+
        var cscale;
 
        if (parseInt(lan_id)==0){
@@ -76,12 +90,23 @@
                 .attr("class","state")
                 .attr("d", path)
                 .style("fill", function(d){
-                  console.log(d.seq)
-                  console.log(data_in_us)
+                  //console.log(d.seq)
+                  //console.log(data_in_us)
                   return colors(data_in_us.state_count[d.seq]);
                 })
-                .append("svg:title")
-                .text(function(d){ return d.properties.name+"\n"+data_in_us.state_count[d.seq]});
+                .on("mouseover",function(d){
+                  tip.show(d);
+                  d3.select(this).transition().duration(200).style('fill','yellow');
+                })
+                .on("mouseout",function(d){
+                  tip.hide();
+                  d3.select(this).transition().duration(200).style('fill',function (d){
+                    //console.log(i);
+                    return colors(data_in_us.state_count[d.seq]);
+                  })
+                })
+                //.append("svg:title")
+                //.text(function(d){ return d.properties.name+"\n"+data_in_us.state_count[d.seq]});
 
       //d3.csv("us_city.csv", function(data) { 
          //console.log(data);
@@ -107,6 +132,7 @@
                         .remove();
                     console.log(colors.range())
                     // build the map legend
+                    document.getElementById("legend").innerHTML="<span class = 'legendTitle'>"+language+" Jobs</span>";
                     var legend = d3.select('#legend')
                         .append('ul')
                         .attr('class', 'list-inline');
